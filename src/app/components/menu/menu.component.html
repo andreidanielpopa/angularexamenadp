@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <img src="https://appcubos2024-ayg5bkctbraeazac.francecentral-01.azurewebsites.net/assets/images/spiderman.png"
+            alt="" style="width: 50px; height: 70px" />
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <!-- Cubos -->
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" [routerLink]="['/']"
+                        routerLinkActive="active">Cubos</a>
+                </li>
+
+                <!-- Marcas Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMarcas" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">Marcas</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMarcas">
+                        <li *ngFor="let marca of marcas">
+                            <a class="dropdown-item" [routerLink]="['/cubos', marca]">{{ marca }}</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!-- Seguridad Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownSeguridad" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">Seguridad</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownSeguridad">
+                        <li>
+                            <a class="dropdown-item" [routerLink]="['/login']">Iniciar Sesión</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" [routerLink]="['/register']">Registrarse</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

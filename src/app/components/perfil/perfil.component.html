@@ -1,0 +1,10 @@
+<div>
+    <h1>Mi perfil ({{ usuario.nombre }})</h1>
+    <h4>Nombre</h4>
+    <p>{{ usuario.nombre }}</p>
+
+    <h4>Email</h4>
+    <p>USER {{ usuario.email }}</p>
+
+    <a class="btn btn-info" [routerLink]="['/compras']" aria-current="page">Mostrar compras</a>
+</div>

@@ -1,0 +1,13 @@
+<div>
+    <h1>Realizar Pedido</h1>
+    <form (ngSubmit)="realizarPedido()" style="width: 500px; margin: 0 auto">
+        <select class="form-control" #idCubo name="idCubo">
+            <option *ngFor="let cubo of cubos" [value]="cubo.idCubo">
+                {{ cubo.nombre }}
+            </option>
+        </select>
+
+        <br />
+        <button type="submit" class="btn btn-info">Comprar</button>
+    </form>
+</div>

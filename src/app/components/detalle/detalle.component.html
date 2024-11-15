@@ -1,0 +1,24 @@
+<div style="width: 80%">
+    <h1>{{ cubo.nombre }}</h1>
+    <div class="card">
+        <img [src]="cubo.imagen" class="card-img-top" alt="Imagen del Cubo" />
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+                Marca y modelo: {{ cubo.marca }} {{ cubo.modelo }}
+            </li>
+            <li class="list-group-item">Valoración: {{ cubo.valoracion }}</li>
+            <li class="list-group-item">Precio: {{ cubo.precio }}€</li>
+        </ul>
+        <div>
+            <a class="btn btn-info" [routerLink]="['/']">Volver</a>
+        </div>
+    </div>
+
+    <h3>Comentarios</h3>
+    <ul id="lista" class="list-group">
+        <li *ngFor="let comentario of comentarios" class="list-group-item">
+            ({{ comentario.fechaComentario }}) Usuario {{ comentario.idUsuario }}:
+            {{ comentario.comentario }}
+        </li>
+    </ul>
+</div>

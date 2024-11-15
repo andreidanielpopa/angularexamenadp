@@ -1,0 +1,15 @@
+<div>
+    <h1>Cubos de la marca: {{ marca }}</h1>
+    <div class="row">
+        <div class="col-3 mb-3" *ngFor="let cubo of cubos">
+            <div class="card" style="width: 18rem">
+                <img [src]="cubo.imagen" class="card-img-top" alt="Imagen de Cubo" />
+                <div class="card-body">
+                    <h5 class="card-title">{{ cubo.nombre }}</h5>
+                    <p class="card-text">{{ cubo.precio }} €</p>
+                    <a class="btn btn-info" [routerLink]="['/detalles', cubo.idCubo]">Ver detalles</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
